@@ -1,9 +1,10 @@
 <header>
   <h1><a class="title-link" href="/">{{ site.title | escape }}</a></h1>
+  <a href="/"><img width="230" src="/assets/images/skillet.jpg"></a>
 
   {% for my_page in site.pages %}
     {% if my_page.title %}
-    <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+    <p><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></p>
     {% endif %}
   {% endfor %}
 

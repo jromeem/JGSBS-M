@@ -8,6 +8,22 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.site-title {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  letter-spacing: 2px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.page-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .post-grid {
   list-style: none;
 }

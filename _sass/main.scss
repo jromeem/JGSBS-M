@@ -8,6 +8,20 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.site-header {
+  border-bottom: 0px;
+  .site-title, .site-nav {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    .site-title, .site-nav {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
 .site-title {
   font-family: 'Alegreya Sans SC', sans-serif;
   letter-spacing: 2px;
@@ -34,6 +48,14 @@ body {
 
 .post-grid {
   list-style: none;
+}
+
+.post-header {
+  .post-title {
+    font-size: 26px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    letter-spacing: 1px;
+  }
 }
 
 .post-tile-contain {

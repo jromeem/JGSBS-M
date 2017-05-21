@@ -14,7 +14,6 @@ order: 1
           <a href="{{ post.url | relative_url }}">
             <div class="post-tile" style="background:url('/assets/images/{{post.tile_bg}}');">
               <p class="post-title">{{ post.title | escape }}</p>
-              <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
             </div>
           </a>
         </div>

@@ -14,10 +14,20 @@
       </span>
 
       <div class="trigger">
+        {% if page.name == 'index.md' %}
+          <a class="page-link title-highlight" href="/">Projects</a>
+        {% else %}
+          <a class="page-link" href="/">Projects</a>
+        {% endif %}
+
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {% if page.title == my_page.title %}
+              <a class="page-link title-highlight" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {% else %}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>

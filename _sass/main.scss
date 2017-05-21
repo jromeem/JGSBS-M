@@ -19,9 +19,17 @@ body {
 .page-link {
   font-size: 12px;
   text-transform: uppercase;
+  padding: 3px;
   &:hover {
-    text-decoration: none;
+    text-decoration-color: #000;
+    // background-color: #ff0;
   }
+}
+
+.title-highlight {
+  background-color: #000;
+  color: #fff !important;
+  padding: 3px;
 }
 
 .post-grid {

@@ -1,16 +1,25 @@
 ---
-layout: page
+layout: default
 title: Adventures
-permalink: /Adventures/
-order: 2
+permalink: /adventures/
+order: 1
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<div class="home">
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+  <div class="post-grid row">
+    {% for post in site.posts %}
+      {% if post.categories contains 'adventures' %}
+        <div class="post-tile-contain col-sm-6 col-lg-3">
+          <a href="{{ post.url | relative_url }}">
+            <div class="post-tile" style="background:url('/assets/images/{{post.tile_bg}}');">
+              <p class="post-title">{{ post.title | escape }}</p>
+              <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+            </div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+</div>

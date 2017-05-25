@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: photos
 title:  "Welcome to Adventure!"
 date:   2016-12-01 01:22:29 -0600
 category: adventures

@@ -14,6 +14,8 @@ layout: angular
   </section>
 
   <script type="text/javascript">
+    // ref:https://github.com/xieranmaya/blog/issues/6
+    // source:http://jsbin.com/tisaluy/8/edit?html,css,output
     function ImageLayout($scope, $http) {
       $http.get('{{ page.photos_json }}').then(function (success) {
         console.log("controlelr", success);

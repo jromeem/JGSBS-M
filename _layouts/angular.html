@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="App" lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html ng-app="PhotosApp" lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include angular-head.html %}
 
@@ -18,7 +18,6 @@
       }
       div {
         margin: 2px;
-        /*background-color: violet;*/
         position: relative;
       }
       i{
@@ -34,14 +33,7 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        
-        <section>
-          <div ng-repeat="img in imgs" style="width: {[{ img.width*200/img.height }]}px;flex-grow: {[{ img.width*200/img.height }]}">
-            <i style="padding-bottom:{[{ img.height/img.width*100 }]}%"></i>
-            <img ng-src="https://xieranmaya.github.io/images/cats/{[{ img.url }]}">
-          </div>
-        </section>
-      
+        {{ content }}
       </div>
     </main>
   </body>

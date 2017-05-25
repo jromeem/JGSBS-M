@@ -14,25 +14,13 @@
 
   <script type="text/javascript">
     console.log("outside controller");
-    var app = angular.module('App', []);
+    var photosApp = angular.module('PhotosApp', []);
 
-    app.config(function($interpolateProvider) {
+    photosApp.config(function($interpolateProvider) {
       $interpolateProvider.startSymbol('{[{');
       $interpolateProvider.endSymbol('}]}');
       console.log("you are in the config!");
     });
-
-    function ImageLayout($scope, $http) {
-      $scope.whatever = "whatever man!"
-      $http.get('https://xieranmaya.github.io/images/cats/cats.json').then(function (success) {
-        console.log("controlelr", success);
-        $scope.imgs = success.data;
-
-      },function (error){
-        console.log("error getting images!");
-       });
-    }
-    app.controller('ImageLayout', ImageLayout)
   </script>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}

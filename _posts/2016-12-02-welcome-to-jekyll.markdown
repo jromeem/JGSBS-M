@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: photos
 title:  "Welcome to Adventure 1!"
-date:   2016-12-01 01:22:29 -0600
+date:   2016-12-02 01:22:29 -0600
 category: adventures
 tile_bg: '3.jpg'
 ---
